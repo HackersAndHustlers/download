@@ -1,0 +1,4 @@
+
+1. Edit download.py and replace PUT_YOUR_ACCESS_TOKEN_HERE with your access token which you can get here: http://developers.facebook.com/tools/explorer
+2. run 'python download.py' which will download one page at a time into the data directory
+3. run 'python merge.py' to merge all the data files into one file called hackersandhustlers.json
