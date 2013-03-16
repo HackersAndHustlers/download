@@ -1,8 +1,9 @@
 import json
+import os
 import urllib2
 
 all_posts = []
-access_token = 'PUT_YOUR_ACCESS_TOKEN_HERE'
+access_token = os.environ.get('HNH_FB_AT',raw_input('access_token:'))
 url = "https://graph.facebook.com/160284404008688/feed?limit=250&access_token=" + access_token
 
 while(True):
