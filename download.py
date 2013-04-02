@@ -1,5 +1,6 @@
 import json
 import os
+import sys
 import urllib2
 
 all_posts = []
@@ -17,6 +18,9 @@ while(True):
     if 'paging' not in data:
         break
     url = data['paging']['next']
+    sys.stdout.write('.')
+    sys.stdout.flush()
+print
 
 out_file = open('hackersandhustlers.json', 'w')
 out_file.write(json.dumps(all_posts))
